@@ -1,3 +1,4 @@
+import { MovieCard } from '../../Components/MovieCard';
 import classes from './Homepage.module.css';
 
 export function Homepage() {
@@ -5,7 +6,7 @@ export function Homepage() {
         <main className={classes.main}>
             <h1>Melhores filmes:</h1>
             <ul className="movie-list">
-                
+                <li><MovieCard/></li>
             </ul>
         </main>
     );

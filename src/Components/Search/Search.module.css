@@ -24,7 +24,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(216, 216, 75);
+    background-color: #DEB887;
 }
 
 .search button svg {
