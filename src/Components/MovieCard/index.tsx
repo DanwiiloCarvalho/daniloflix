@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Movie } from '../../Pages/Homepage';
 import classes from './MovieCard.module.css';
 import { AiFillStar } from 'react-icons/ai';
@@ -12,7 +13,7 @@ export function MovieCard(props: Movie) {
                 <span className={classes.star}><AiFillStar/></span>
                 <span className={classes.grade}>{props.vote_average}</span>
             </div>
-            <button className={classes.details_button}>Detalhes</button>
+            <Link to={'/'} className={classes.details_button}>Detalhes</Link>
         </article>
     );
 }

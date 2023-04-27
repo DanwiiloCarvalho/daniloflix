@@ -43,5 +43,6 @@
     border-radius: 4px;
     background-color: #DEB887;
     font-weight: bold;
-    cursor: pointer;
+    text-align: center;
+    color: black;
 }
