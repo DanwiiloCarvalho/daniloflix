@@ -1,9 +1,10 @@
 import { Brand } from "../Brand";
 import { Search } from "../Search";
+import classes from './Header.module.css';
 
 export function Header() {
     return (
-        <header>
+        <header className={classes.header}>
             <Brand/>
             <Search/>
         </header>

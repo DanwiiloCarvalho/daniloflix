@@ -1,7 +1,8 @@
 import { BiCameraMovie } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 export function Brand() {
     return (
-        <a href=""><BiCameraMovie/><span>Daniloflix</span></a>
+        <Link to={'/'}><BiCameraMovie/><span>Daniloflix</span></Link>
     );
 }
