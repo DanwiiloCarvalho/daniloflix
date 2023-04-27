@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 100px;
+    height: 120px;
+    padding: 8px 0;
     grid-area: header;
 }

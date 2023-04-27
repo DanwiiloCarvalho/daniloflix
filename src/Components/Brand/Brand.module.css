@@ -1,0 +1,7 @@
+.brand {
+    color: #c0c023;
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: flex;
+    gap: 4px;
+}

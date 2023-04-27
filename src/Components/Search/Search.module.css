@@ -1,0 +1,33 @@
+.search {
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.search input {
+    padding: 0 5px;
+    font-size: 1rem;
+    width: 180px;
+}
+
+.search input, .search button {
+    height: 100%;
+    border: none;
+    border-radius: 3px;
+}
+
+.search button {
+    cursor: pointer;
+    width: 35px;
+    background-color: ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(216, 216, 75);
+}
+
+.search button svg {
+    height: 1.3rem;
+    width: 1.3rem;
+}
