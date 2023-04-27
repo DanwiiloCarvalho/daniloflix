@@ -7,6 +7,8 @@ export function Homepage() {
             <h1>Melhores filmes:</h1>
             <ul className="movie-list">
                 <li><MovieCard/></li>
+                <li><MovieCard/></li>
+                <li><MovieCard/></li>
             </ul>
         </main>
     );
