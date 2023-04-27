@@ -1,5 +1,12 @@
+import classes from './Homepage.module.css';
+
 export function Homepage() {
     return (
-        <h1>Melhores filmes</h1>
+        <main className={classes.main}>
+            <h1>Melhores filmes</h1>
+            <ul className="movie-list">
+                
+            </ul>
+        </main>
     );
 }
