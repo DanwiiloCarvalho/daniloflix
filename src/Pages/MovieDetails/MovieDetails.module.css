@@ -1,0 +1,84 @@
+.movie_info {
+    flex: 1;
+    background-color: black;
+}
+
+.moviecard {
+    background-color: #1b1b1b;
+    height: 550px;
+    width: 70%;
+    margin: 20px auto;
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.poster {
+    width: 100%;
+}
+
+.container > h1 {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.star {
+    color: #DEB887;
+}
+
+.grade {
+    color: whitesmoke;
+}
+
+.score {
+    display: flex;
+    gap: 5px;
+}
+
+.tagline {
+    color: whitesmoke;
+    margin: 15px 0 35px;
+}
+
+.movie_attributes {
+    align-self: flex-start;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.movie_attributes > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info {
+    display: flex;
+    gap: 5px;
+}
+
+.info > svg {
+    color: #DEB887;
+}
+
+.info > span {
+    font-weight: 600;
+}
+
+.chart {
+    stroke-width: 20;
+}
