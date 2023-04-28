@@ -49,7 +49,7 @@ export function Homepage() {
             <h1>Melhores filmes:</h1>
             <ul className="movie-list">
                 {moviesTopRated 
-                    && moviesTopRated.map(movie => <li><MovieCard {...movie}/></li>)}
+                    && moviesTopRated.map(movie => <li key={movie.id}><MovieCard {...movie}/></li>)}
             </ul>
         </main>
     );

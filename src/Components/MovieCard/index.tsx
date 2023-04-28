@@ -5,6 +5,10 @@ import { AiFillStar } from 'react-icons/ai';
 
 export function MovieCard(props: Movie) {
     const poster_path = import.meta.env.VITE_IMAGE + props.poster_path;
+    /* const api_key:string = import.meta.env.VITE_API_KEY;
+    const language:string = import.meta.env.VITE_API_LANGUAGE;
+    const details = import.meta.env.VITE_API_DETAILS + props.id + '?' + api_key + '&' + language; */
+
     return (
         <article className={classes.moviecard}>
             <img className={classes.poster} src={poster_path} alt="" />
@@ -13,7 +17,7 @@ export function MovieCard(props: Movie) {
                 <span className={classes.star}><AiFillStar/></span>
                 <span className={classes.grade}>{props.vote_average}</span>
             </div>
-            <Link to={'/'} className={classes.details_button}>Detalhes</Link>
+            <Link to={'/movie/' + props.id} className={classes.details_button}>Detalhes</Link>
         </article>
     );
 }
