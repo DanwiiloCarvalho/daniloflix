@@ -1,8 +1,9 @@
-import { ErrorInfo, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { MovieCard } from '../../Components/MovieCard';
 import classes from './Homepage.module.css';
 
 export type Movie = {
+    id: number,
     poster_path: string,
     title: string,
     vote_average: number
@@ -29,6 +30,7 @@ export function Homepage() {
                 const data: DataResponse = await response.json();
                 const dataMovies = data.results.map(value => {
                     return {
+                        id: value.id,
                         poster_path: value.poster_path,
                         title: value.title,
                         vote_average: value.vote_average
