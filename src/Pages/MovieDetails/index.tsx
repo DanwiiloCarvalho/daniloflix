@@ -3,49 +3,96 @@ import { BsFileEarmarkTextFill, BsWallet2 } from 'react-icons/bs';
 import { GiChart } from 'react-icons/gi';
 import { BsHourglassSplit } from 'react-icons/bs';
 import classes from './MovieDetails.module.css';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+
+type Details = {
+    poster_path: string,
+    title: string,
+    vote_average: number,
+    tagline: string,
+    budget: number,
+    revenue: number,
+    runtime: number,
+    overview: string
+}
 
 export function MovieDetails() {
+    const [movieDetails, setMovieDetails] = useState<Details | null>(null);
+    const {id} = useParams();
+
+    const api_key:string = import.meta.env.VITE_API_KEY;
+    const language:string = import.meta.env.VITE_API_LANGUAGE;
+    const urlDetails = import.meta.env.VITE_API_DETAILS + id + '?' + api_key + '&' + language;
+    
+    useEffect(() => {
+        async function fetchMovieDetails() {
+            try {
+                const response = await fetch(urlDetails);
+                const data = await response.json();
+                const details: Details = {
+                    poster_path: data.poster_path,
+                    title: data.title,
+                    vote_average: data.vote_average,
+                    tagline: data.tagline,
+                    budget: data.budget,
+                    revenue: data.revenue,
+                    runtime: data.runtime,
+                    overview: data.overview         
+                }  
+                setMovieDetails(details);
+            } catch (error: unknown) {
+                console.log(error);
+            }
+        }
+        fetchMovieDetails();
+    },[]);
+
+    //console.log(id)
+
     return (
-        <main className={classes.movie_info}>
+        <>
+        {movieDetails && <main className={classes.movie_info}>
             <article className={classes.container}>
-                <img className={classes.poster} src="https://image.tmdb.org/t/p/original/9Baumh5J9N1nJUYzNkm0xsgjpwY.jpg" alt="" />
-                <h1>The Godfather</h1>
+                <img className={classes.poster} src={import.meta.env.VITE_IMAGE + '/' + movieDetails?.poster_path} alt="" />
+                <h1>{movieDetails?.title}</h1>
                 <div className={classes.score}>
                     <span className={classes.star}><AiFillStar/></span>
-                    <span className={classes.grade}>8.7</span>
+                    <span className={classes.grade}>{movieDetails?.vote_average}</span>
                 </div>
-                <p className={classes.tagline}>An offer you can't refuse</p>
+                <p className={classes.tagline}>{movieDetails?.tagline}</p>
                 <section className={classes.movie_attributes}>
                     <div>
                         <div className={classes.info}>
                             <BsWallet2/>
                             <span>Orçamento:</span>
                         </div>
-                        <p>$6,000,000.00</p>
+                        <p>${movieDetails?.budget}</p>
                     </div>
                     <div>
                         <div className={classes.info}>
                             <GiChart className={classes.chart}/>
                             <span>Receita:</span>
                         </div>
-                        <p>$245,066,411.00</p>
+                        <p>${movieDetails?.revenue}</p>
                     </div>
                     <div>
                         <div className={classes.info}>
                             <BsHourglassSplit/>
                             <span>Duração:</span>
                         </div>
-                        <p>175 minutos</p>
+                        <p>{movieDetails?.runtime} minutos</p>
                     </div>
                     <div>
                         <div className={classes.info}>
                             <BsFileEarmarkTextFill/>
                             <span>Descrição:</span>
                         </div>
-                        <p>Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.</p>
+                        <p>{movieDetails?.overview}</p>
                     </div>
                 </section>
             </article>
-        </main>
+        </main>}
+        </>
     );
 }
