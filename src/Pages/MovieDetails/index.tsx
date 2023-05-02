@@ -67,14 +67,15 @@ export function MovieDetails() {
                             <BsWallet2/>
                             <span>Orçamento:</span>
                         </div>
-                        <p>${movieDetails?.budget}</p>
+                        <p>{new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(movieDetails?.budget)}</p>
                     </div>
                     <div>
                         <div className={classes.info}>
                             <GiChart className={classes.chart}/>
                             <span>Receita:</span>
                         </div>
-                        <p>${movieDetails?.revenue}</p>
+                        <p>{new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(movieDetails?.revenue)
+                        }</p>
                     </div>
                     <div>
                         <div className={classes.info}>
