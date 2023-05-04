@@ -10,6 +10,25 @@
     margin: 15px 0;
 }
 
-.results_search {
-    
+.show_more {
+    display: block;
+    margin: 15px auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 2px;
+    /*background-color: #DEB887;*/
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 5px rgb(229, 226, 226);
+}
+
+.show_more:hover {
+    background-color: white;
+}
+
+.total_size {
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 10px;
 }

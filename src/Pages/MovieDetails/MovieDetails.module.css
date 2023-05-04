@@ -82,3 +82,10 @@
 .chart {
     stroke-width: 20;
 }
+
+.placeholder {
+    background: url(/public/template.svg) no-repeat center;
+    flex-basis: 100px;
+    align-self: stretch;
+    min-height: 364.5px;
+}

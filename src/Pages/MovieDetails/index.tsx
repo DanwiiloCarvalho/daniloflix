@@ -54,7 +54,9 @@ export function MovieDetails() {
         <>
         {movieDetails && <main className={classes.movie_info}>
             <article className={classes.container}>
-                <img className={classes.poster} src={import.meta.env.VITE_IMAGE + '/' + movieDetails?.poster_path} alt="" />
+                {/* <img className={classes.poster} src={import.meta.env.VITE_IMAGE + '/' + movieDetails?.poster_path} alt="" /> */}
+                {movieDetails.poster_path && <img className={classes.poster} src={import.meta.env.VITE_IMAGE + '/' + movieDetails?.poster_path} alt="" />}
+                {!movieDetails.poster_path && <div className={classes.placeholder}></div>}
                 <h1>{movieDetails?.title}</h1>
                 <div className={classes.score}>
                     <span className={classes.star}><AiFillStar/></span>
