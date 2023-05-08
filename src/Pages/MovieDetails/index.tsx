@@ -5,6 +5,7 @@ import { BsHourglassSplit } from 'react-icons/bs';
 import classes from './MovieDetails.module.css';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { VideoPlayer } from '../../Components/VideoPlayer';
 
 type Details = {
     poster_path: string,
@@ -17,13 +18,20 @@ type Details = {
     overview: string
 }
 
+export type Trailer = {
+    name: string,
+    key: string
+}
+
 export function MovieDetails() {
     const [movieDetails, setMovieDetails] = useState<Details | null>(null);
+    const [trailers, setTrailers] = useState<Trailer[] | null>(null);
     const {id} = useParams();
 
     const api_key:string = import.meta.env.VITE_API_KEY;
     const language:string = import.meta.env.VITE_API_LANGUAGE;
     const urlDetails = import.meta.env.VITE_API_DETAILS + id + '?' + api_key + '&' + language;
+    const urlTrailers = import.meta.env.VITE_API_DETAILS + id + '/videos' + '?' + api_key + '&' + language;
     
     useEffect(() => {
         async function fetchMovieDetails() {
@@ -41,10 +49,22 @@ export function MovieDetails() {
                     overview: data.overview         
                 }  
                 setMovieDetails(details);
+                const responseTrailers = await fetch(urlTrailers);
+                const trailersArray = await responseTrailers.json().then(data => data.results) as Trailer[];
+                const trailersResult: Trailer[] = trailersArray.map(trailer => {
+                    return {
+                        name: trailer.name,
+                        key: trailer.key
+                    } as Trailer
+                })
+                
+                setTrailers(trailersResult);
+
             } catch (error: unknown) {
                 console.log(error);
             }
         }
+
         fetchMovieDetails();
     },[]);
 
@@ -93,6 +113,11 @@ export function MovieDetails() {
                         </div>
                         <p>{movieDetails?.overview}</p>
                     </div>
+                    {trailers && 
+                        <ul className={classes.trailers_list}>
+                            {trailers && trailers.map(trailer =>  <li key={trailer.key}><VideoPlayer key_trailer={trailer.key}/></li>)}
+                        </ul>}
+                    
                 </section>
             </article>
         </main>}

@@ -34,7 +34,7 @@ export function SearchResults() {
             //setSearchResults(prevResults => [...prevResults, ...data.results]);
         }
         fetchSearchResults();
-    }, []);
+    }, [searchParams]);
 
     //console.log("renderizou")
 
