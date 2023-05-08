@@ -1,4 +1,3 @@
-import { Trailer } from '../../Pages/MovieDetails';
 import './VideoPlayer.modules.css';
 
 export function VideoPlayer(props: {key_trailer:string}) {

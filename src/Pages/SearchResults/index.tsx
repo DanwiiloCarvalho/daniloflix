@@ -21,17 +21,22 @@ export function SearchResults() {
 
     useEffect(() => {
         async function fetchSearchResults() {
-            const response = await fetch(urlResults);
-            const data = await response.json();
-            //setSearchResults([...searchResults, ...data.results]);
-            setSearchResults(data.results)
-            const info: infoResults = {
-                page: data.page,
-                total_pages: data.total_pages,
-                total_results: data.total_results
+            try {
+                const response = await fetch(urlResults);
+                const data = await response.json();
+                //setSearchResults([...searchResults, ...data.results]);
+                setSearchResults(data.results)
+                const info: infoResults = {
+                    page: data.page,
+                    total_pages: data.total_pages,
+                    total_results: data.total_results
+                }
+                setInfoResults(info);
+                //setSearchResults(prevResults => [...prevResults, ...data.results]);
+            } catch (error: unknown) {
+                console.log(error as Error);
             }
-            setInfoResults(info);
-            //setSearchResults(prevResults => [...prevResults, ...data.results]);
+            
         }
         fetchSearchResults();
     }, [searchParams]);
@@ -40,14 +45,18 @@ export function SearchResults() {
 
     function showMore() {
         async function fetchNextPage() {
-            const urlNextPage:string = urlResults + '&page=' + ++infoResults.page;
-            console.log(infoResults.page)
-            const response = await fetch(urlNextPage);
-            const data = await response.json();
-            setSearchResults(prev => [...prev, ...data.results]);
+            try {
+                const urlNextPage:string = urlResults + '&page=' + ++infoResults.page;
+                console.log(infoResults.page)
+                const response = await fetch(urlNextPage);
+                const data = await response.json();
+                setSearchResults(prev => [...prev, ...data.results]);
+            } catch (error: unknown) {
+                console.log(error as Error);
+            }
+            
         }
         fetchNextPage();
-        console.log(searchResults);
     }
 
     return (
@@ -57,7 +66,6 @@ export function SearchResults() {
                 {searchResults && 
                     searchResults.map(movie => <li key={movie.id}><MovieCard {...movie}/></li>)}
             </ul>
-            {/* <button className={classes.show_more}>Ver mais</button> */}
             {(searchResults.length < infoResults.total_results) && <button className={classes.show_more} onClick={showMore}>Ver mais</button>}
             <p className={classes.total_size}>{searchResults.length} de {infoResults.total_results}</p>
         </main>

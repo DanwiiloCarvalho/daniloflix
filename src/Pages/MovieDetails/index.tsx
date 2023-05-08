@@ -61,20 +61,17 @@ export function MovieDetails() {
                 setTrailers(trailersResult);
 
             } catch (error: unknown) {
-                console.log(error);
+                console.log(error as Error);
             }
         }
 
         fetchMovieDetails();
     },[]);
 
-    //console.log(id)
-
     return (
         <>
         {movieDetails && <main className={classes.movie_info}>
             <article className={classes.container}>
-                {/* <img className={classes.poster} src={import.meta.env.VITE_IMAGE + '/' + movieDetails?.poster_path} alt="" /> */}
                 {movieDetails.poster_path && <img className={classes.poster} src={import.meta.env.VITE_IMAGE + '/' + movieDetails?.poster_path} alt="" />}
                 {!movieDetails.poster_path && <div className={classes.placeholder}></div>}
                 <h1>{movieDetails?.title}</h1>
