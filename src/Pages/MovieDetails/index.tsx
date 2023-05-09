@@ -4,7 +4,7 @@ import { GiChart } from 'react-icons/gi';
 import { BsHourglassSplit } from 'react-icons/bs';
 import classes from './MovieDetails.module.css';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { VideoPlayer } from '../../Components/VideoPlayer';
 
 type Details = {
@@ -27,6 +27,7 @@ export function MovieDetails() {
     const [movieDetails, setMovieDetails] = useState<Details | null>(null);
     const [trailers, setTrailers] = useState<Trailer[] | null>(null);
     const {id} = useParams();
+    const navigate = useNavigate();
 
     const api_key:string = import.meta.env.VITE_API_KEY;
     const language:string = import.meta.env.VITE_API_LANGUAGE;
@@ -37,6 +38,10 @@ export function MovieDetails() {
         async function fetchMovieDetails() {
             try {
                 const response = await fetch(urlDetails);
+                if (response.status === 404) {
+                    navigate('/notfound');
+                    return;
+                }
                 const data = await response.json();
                 const details: Details = {
                     poster_path: data.poster_path,
