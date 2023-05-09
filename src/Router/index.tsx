@@ -4,6 +4,7 @@ import { MovieDetails } from "../Pages/MovieDetails";
 import { SearchResults } from "../Pages/SearchResults";
 import { App } from "../Components/App";
 import { NoResults } from "../Pages/NoResults";
+import { ErrorPage } from "../Pages/ErrorPage";
 
 export const router = createBrowserRouter([
     {
@@ -20,13 +21,22 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/search',
-                element: <SearchResults/>
+                element: <SearchResults/>,
+                children: [
+                    {
+                        path: '/search',
+                        element: <NoResults/>
+                    }
+                ]
             },
             {
                 path: '/notfound',
                 element: <NoResults/>
+            },
+            {
+                path: '/:invalid_path',
+                element: <ErrorPage/>
             }
-        ],
-        errorElement: <h1>Error!</h1>
+        ]
     }
 ]);

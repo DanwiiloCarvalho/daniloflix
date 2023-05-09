@@ -1,6 +1,6 @@
-import { useSearchParams } from 'react-router-dom';
+import { Outlet, useSearchParams } from 'react-router-dom';
 import classes from './SearchResults.module.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Movie } from '../Homepage';
 import { MovieCard } from '../../Components/MovieCard';
 
@@ -14,6 +14,7 @@ export function SearchResults() {
     const [searchParams] = useSearchParams();
     const [searchResults, setSearchResults] = useState<Movie[]>([]);
     const [infoResults, setInfoResults] = useState<infoResults>({} as infoResults);
+    const mainElement = useRef<HTMLElement | null>(null);
 
     const api_key:string = import.meta.env.VITE_API_KEY;
     const language:string = import.meta.env.VITE_API_LANGUAGE;
@@ -25,7 +26,13 @@ export function SearchResults() {
                 const response = await fetch(urlResults);
                 const data = await response.json();
                 //setSearchResults([...searchResults, ...data.results]);
-                setSearchResults(data.results)
+                setSearchResults(data.results);
+
+                /* if (searchResults.length === 0 && mainElement.current) {
+                    console.log(mainElement.current);
+                    mainElement.current.classList.add('no_results')
+                } */
+
                 const info: infoResults = {
                     page: data.page,
                     total_pages: data.total_pages,
@@ -47,7 +54,7 @@ export function SearchResults() {
         async function fetchNextPage() {
             try {
                 const urlNextPage:string = urlResults + '&page=' + ++infoResults.page;
-                console.log(infoResults.page)
+                //console.log(infoResults.page)
                 const response = await fetch(urlNextPage);
                 const data = await response.json();
                 setSearchResults(prev => [...prev, ...data.results]);
@@ -60,14 +67,16 @@ export function SearchResults() {
     }
 
     return (
-        <main className={classes.main_container}>
+        <main className={classes.main_container} ref={mainElement}>
             <h1>Resultados para: {searchParams.get('q')}</h1>
             <ul className={classes.results_search}>
                 {searchResults && 
                     searchResults.map(movie => <li key={movie.id}><MovieCard {...movie}/></li>)}
             </ul>
             {(searchResults.length < infoResults.total_results) && <button className={classes.show_more} onClick={showMore}>Ver mais</button>}
-            <p className={classes.total_size}>{searchResults.length} de {infoResults.total_results}</p>
+            {searchResults.length === 0 && <div className={classes.no_results}><Outlet/></div>}
+            {searchResults.length > 0 && <p className={classes.total_size}>{searchResults.length} de {infoResults.total_results}</p>}
+            {/* <p className={classes.total_size}>{searchResults.length} de {infoResults.total_results}</p> */}
         </main>
     );
 }

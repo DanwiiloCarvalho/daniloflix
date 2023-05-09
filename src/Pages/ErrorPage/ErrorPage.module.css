@@ -1,0 +1,23 @@
+.main_error {
+    background-color: black;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main_error > p {
+    color: #DEB887;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+    width: 80%;
+}
+
+.main_error > svg {
+    color: #DEB887;
+    width: 5rem;
+    height: 5rem;
+}
