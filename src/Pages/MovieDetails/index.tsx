@@ -113,7 +113,7 @@ export function MovieDetails() {
                             <BsFileEarmarkTextFill/>
                             <span>Descrição:</span>
                         </div>
-                        <p>{movieDetails?.overview}</p>
+                        <p className={classes.overview}>{movieDetails?.overview}</p>
                     </div>
                     {trailers && 
                         <ul className={classes.trailers_list}>
