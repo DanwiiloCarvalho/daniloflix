@@ -1,4 +1,4 @@
-.main_error {
+/* .main_error {
     background-color: black;
     flex: 1;
     display: flex;
@@ -6,6 +6,15 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+} */
+
+.main_error {
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .main_error > p {

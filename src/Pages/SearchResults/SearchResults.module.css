@@ -30,6 +30,7 @@
     /*background-color: #DEB887;*/
     background-color: whitesmoke;
     box-shadow: 0px 0px 5px rgb(229, 226, 226);
+    cursor: pointer;
 }
 
 .show_more:hover {
@@ -40,4 +41,21 @@
     color: whitesmoke;
     text-align: center;
     margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .main_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 15px 0;
+    }
+
+    .results_search {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+        grid-template-rows: repeat(auto-fit,minmax(250px,1fr));
+    }
 }

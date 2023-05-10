@@ -47,7 +47,7 @@ export function Homepage() {
     return (
         <main className={classes.main}>
             <h1>Melhores filmes:</h1>
-            <ul className="movie-list">
+            <ul className={classes.movie_list}>
                 {moviesTopRated 
                     && moviesTopRated.map(movie => <li key={movie.id}><MovieCard {...movie}/></li>)}
             </ul>

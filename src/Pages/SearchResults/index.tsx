@@ -14,17 +14,26 @@ export function SearchResults() {
     const [searchParams] = useSearchParams();
     const [searchResults, setSearchResults] = useState<Movie[]>([]);
     const [infoResults, setInfoResults] = useState<infoResults>({} as infoResults);
-    const mainElement = useRef<HTMLElement | null>(null);
+
+    const [notFound, setNotFound] = useState<boolean>(false);
+
+    //const mainElement = useRef<HTMLElement | null>(null);
 
     const api_key:string = import.meta.env.VITE_API_KEY;
     const language:string = import.meta.env.VITE_API_LANGUAGE;
     const urlResults = import.meta.env.VITE_API_SEARCH + '?query=' + searchParams.get('q') + '&' + api_key + '&' + language;
 
     useEffect(() => {
+        setNotFound(false);
         async function fetchSearchResults() {
             try {
                 const response = await fetch(urlResults);
                 const data = await response.json();
+
+                if (data.total_results === 0) {
+                    setNotFound(true);
+                }
+
                 //setSearchResults([...searchResults, ...data.results]);
                 setSearchResults(data.results);
 
@@ -67,14 +76,14 @@ export function SearchResults() {
     }
 
     return (
-        <main className={classes.main_container} ref={mainElement}>
+        <main className={classes.main_container}>
             <h1>Resultados para: {searchParams.get('q')}</h1>
             <ul className={classes.results_search}>
                 {searchResults && 
                     searchResults.map(movie => <li key={movie.id}><MovieCard {...movie}/></li>)}
             </ul>
             {(searchResults.length < infoResults.total_results) && <button className={classes.show_more} onClick={showMore}>Ver mais</button>}
-            {searchResults.length === 0 && <div className={classes.no_results}><Outlet/></div>}
+            {notFound && <div className={classes.no_results}><Outlet/></div>}
             {searchResults.length > 0 && <p className={classes.total_size}>{searchResults.length} de {infoResults.total_results}</p>}
             {/* <p className={classes.total_size}>{searchResults.length} de {infoResults.total_results}</p> */}
         </main>
