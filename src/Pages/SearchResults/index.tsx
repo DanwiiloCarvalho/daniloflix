@@ -77,7 +77,7 @@ export function SearchResults() {
 
     return (
         <main className={classes.main_container}>
-            <h1>Resultados para: {searchParams.get('q')}</h1>
+            <h1>Resultados para: <span className={classes.search_term}>{searchParams.get('q')}</span></h1>
             <ul className={classes.results_search}>
                 {searchResults && 
                     searchResults.map(movie => <li key={movie.id}><MovieCard {...movie}/></li>)}

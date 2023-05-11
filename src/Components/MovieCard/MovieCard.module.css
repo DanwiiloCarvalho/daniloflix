@@ -51,13 +51,21 @@
 
 .details_button {
     width: 100%;
-    border: none;
+    /* border: none; */
+    border: 1px solid #DEB887;
     padding: 15px 0;
     border-radius: 4px;
     background-color: #DEB887;
     font-weight: bold;
     text-align: center;
     color: black;
+    transition: linear 500ms;
+}
+
+.details_button:hover {
+    background-color: transparent;
+    border: 1px solid #DEB887;
+    color: #DEB887;
 }
 
 .placeholder {

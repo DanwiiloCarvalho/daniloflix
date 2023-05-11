@@ -11,6 +11,10 @@
     margin: 15px 0;
 }
 
+.search_term {
+    color: #DEB887;
+}
+
 .no_results {
     position: absolute;
     top: 50%;
