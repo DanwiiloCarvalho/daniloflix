@@ -31,14 +31,20 @@
     padding: 7px 10px;
     border: none;
     border-radius: 2px;
-    /*background-color: #DEB887;*/
     background-color: whitesmoke;
     box-shadow: 0px 0px 5px rgb(229, 226, 226);
+    /* box-shadow:0 4px 0 rgb(192, 192, 192); */
     cursor: pointer;
+    transition: linear 400ms;
 }
 
 .show_more:hover {
-    background-color: white;
+    background-color: rgb(187, 187, 187);
+}
+
+.show_more:active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 .total_size {
