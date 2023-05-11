@@ -5,10 +5,7 @@ import { AiFillStar } from 'react-icons/ai';
 
 export function MovieCard(props: Movie) {
     const poster_path = import.meta.env.VITE_IMAGE + props.poster_path;
-    /* const api_key:string = import.meta.env.VITE_API_KEY;
-    const language:string = import.meta.env.VITE_API_LANGUAGE;
-    const details = import.meta.env.VITE_API_DETAILS + props.id + '?' + api_key + '&' + language; */
-
+    
     return (
         <article className={classes.moviecard}>
             {/* {props.poster_path && <img className={classes.poster} src={poster_path} alt="" />} */}

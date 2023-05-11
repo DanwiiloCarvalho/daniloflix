@@ -1,6 +1,6 @@
 import { Outlet, useSearchParams } from 'react-router-dom';
 import classes from './SearchResults.module.css';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Movie } from '../Homepage';
 import { MovieCard } from '../../Components/MovieCard';
 
@@ -57,13 +57,10 @@ export function SearchResults() {
         fetchSearchResults();
     }, [searchParams]);
 
-    //console.log("renderizou")
-
     function showMore() {
         async function fetchNextPage() {
             try {
                 const urlNextPage:string = urlResults + '&page=' + ++infoResults.page;
-                //console.log(infoResults.page)
                 const response = await fetch(urlNextPage);
                 const data = await response.json();
                 setSearchResults(prev => [...prev, ...data.results]);
@@ -85,7 +82,6 @@ export function SearchResults() {
             {(searchResults.length < infoResults.total_results) && <button className={classes.show_more} onClick={showMore}>Ver mais</button>}
             {notFound && <div className={classes.no_results}><Outlet/></div>}
             {searchResults.length > 0 && <p className={classes.total_size}>{searchResults.length} de {infoResults.total_results}</p>}
-            {/* <p className={classes.total_size}>{searchResults.length} de {infoResults.total_results}</p> */}
         </main>
     );
 }
