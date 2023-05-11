@@ -8,29 +8,29 @@ import { ErrorPage } from "../Pages/ErrorPage";
 
 export const router = createBrowserRouter([
     {
-        path: '/',
+        path: '/daniloflix/',
         element: <App/>,
         children: [
             {
-                path: '/',
+                path: '/daniloflix/',
                 element: <Homepage/>
             },
             {
-                path: '/movie/:id',
+                path: '/daniloflix/movie/:id',
                 element: <MovieDetails/>
             },
             {
-                path: '/search',
+                path: '/daniloflix/search',
                 element: <SearchResults/>,
                 children: [
                     {
-                        path: '/search',
+                        path: '/daniloflix/search',
                         element: <NoResults/>
                     }
                 ]
             },
             {
-                path: '/notfound',
+                path: '/daniloflix/notfound',
                 element: <NoResults/>
             }
         ],
