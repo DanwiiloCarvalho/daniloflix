@@ -82,7 +82,7 @@ export function MovieDetails() {
                 <h1>{movieDetails?.title}</h1>
                 <div className={classes.score}>
                     <span className={classes.star}><AiFillStar/></span>
-                    <span className={classes.grade}>{movieDetails?.vote_average}</span>
+                    <span className={classes.grade}>{movieDetails?.vote_average.toFixed(1)}</span>
                 </div>
                 <p className={classes.tagline}>{movieDetails?.tagline}</p>
                 <section className={classes.movie_attributes}>
