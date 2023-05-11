@@ -14,7 +14,7 @@ export function Search() {
             });
 
             navigate({
-                pathname: '/search',
+                pathname: '/daniloflix/search',
                 search: `?${searchParams}`
             });
             refWordKey.current.value = "";

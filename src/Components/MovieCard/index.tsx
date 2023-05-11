@@ -16,7 +16,7 @@ export function MovieCard(props: Movie) {
                 <span className={classes.star}><AiFillStar/></span>
                 <span className={classes.grade}>{props.vote_average.toFixed(1)}</span>
             </div>
-            <Link to={'/movie/' + props.id} className={classes.details_button}>Detalhes</Link>
+            <Link to={'/daniloflix/movie/' + props.id} className={classes.details_button}>Detalhes</Link>
         </article>
     );
 }

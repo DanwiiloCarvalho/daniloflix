@@ -8,6 +8,6 @@ type Brand = {
 
 export function Brand({brandName}:Brand) {
     return (
-        <Link to={'/'} className={classes.brand}><BiCameraMovie/><span>{brandName}</span></Link>
+        <Link to={'/daniloflix'} className={classes.brand}><BiCameraMovie/><span>{brandName}</span></Link>
     );
 }
