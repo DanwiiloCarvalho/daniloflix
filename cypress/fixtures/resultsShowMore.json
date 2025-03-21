@@ -1,0 +1,374 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                53,
+                27
+            ],
+            "id": 320020,
+            "original_language": "es",
+            "original_title": "Pánico",
+            "overview": "Three tales of horror, isolation and insanity set in Mexico.",
+            "popularity": 0.247,
+            "poster_path": "/6YbQjgKuaHYfsvQJgqxodQn5gzE.jpg",
+            "release_date": "1972-06-15",
+            "title": "Panic",
+            "video": false,
+            "vote_average": 5.5,
+            "vote_count": 7
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/nF74HKjNe7X54XMcIc7ulK5InxR.jpg",
+            "genre_ids": [
+                35
+            ],
+            "id": 4256,
+            "original_language": "en",
+            "original_title": "Scary Movie 3",
+            "overview": "Tudo começa quando a apresentadora de telejornal Cindy Campbell descobre uma série de terríveis acontecimentos que ameaçam o planeta, envolvendo invasores extraterrestres, vídeos assassinos, assustadores círculos de plantações, profecias sobre o Escolhido, crianças com olhares sinistros, rappers brancos ambiciosos e até mesmo uma discussão com Michael Jackson.",
+            "popularity": 3.617,
+            "poster_path": "/y14q7jWS0vH8ZuWPS1v8t8qCmBO.jpg",
+            "release_date": "2003-10-24",
+            "title": "Todo Mundo em Pânico 3",
+            "video": false,
+            "vote_average": 6.0,
+            "vote_count": 4147
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/zbNPtI5JGHRfmtDarTDuqlCRntc.jpg",
+            "genre_ids": [],
+            "id": 771911,
+            "original_language": "es",
+            "original_title": "Pánico",
+            "overview": "Um grupo de jovens enfrenta um assassino mascarado que testa seus conhecimentos sobre filmes de terror.",
+            "popularity": 0.071,
+            "poster_path": "/8ArYAOrb9Hmj7U2YhO579utKQtZ.jpg",
+            "release_date": "1991-01-01",
+            "title": "Pánico",
+            "video": false,
+            "vote_average": 5.0,
+            "vote_count": 2
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 736070,
+            "original_language": "en",
+            "original_title": "PANICO",
+            "overview": "PANIC. To act irrationally, fear of famine and scarcity … irrationally and a desire to laugh when we discover what together we win.",
+            "popularity": 0.012,
+            "poster_path": "/vLKHWiEzFRCthhlZlkHyYxrLthc.jpg",
+            "release_date": "2020-04-02",
+            "title": "PANICO",
+            "video": false,
+            "vote_average": 0.0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/jihXxHQXjzkcWU8ZfVgN8ntpvf5.jpg",
+            "genre_ids": [
+                27,
+                9648
+            ],
+            "id": 4234,
+            "original_language": "en",
+            "original_title": "Scream 3",
+            "overview": "Assassinatos levam uma jovem, um repórter e um ex-policial ao set de um filme de horror inspirado por acontecimentos aterrorizantes aos quais eles sobreviveram.",
+            "popularity": 3.949,
+            "poster_path": "/mZ9rQt8eYvnyZZwjw9OpBWzBemJ.jpg",
+            "release_date": "2000-02-04",
+            "title": "Pânico 3",
+            "video": false,
+            "vote_average": 5.982,
+            "vote_count": 3678
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/8GWfHRApMYUQl1JSX1drAMs5aY1.jpg",
+            "genre_ids": [
+                27,
+                53
+            ],
+            "id": 13186,
+            "original_language": "en",
+            "original_title": "Wrong Turn 2: Dead End",
+            "overview": "De olho em prêmio, grupo de desconhecidos participa de reality show em uma floresta nos EUA e realmente tem de lutar pela sobrevivência quando é aterrorizado por bando de canibais que planeja matar a todos e comê-los depois.",
+            "popularity": 3.533,
+            "poster_path": "/qnJ9yocwpxl0Cvi5kgZZjWIl3NF.jpg",
+            "release_date": "2007-08-25",
+            "title": "Pânico na Floresta 2",
+            "video": false,
+            "vote_average": 6.1,
+            "vote_count": 1413
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/uHZRTGMFb1RLmgWcqlIOZsGbDCT.jpg",
+            "genre_ids": [
+                35
+            ],
+            "id": 4247,
+            "original_language": "en",
+            "original_title": "Scary Movie",
+            "overview": "Depois do assassinato de uma bela colega de classe, um grupo de adolescentes desorientados descobre que há um assassino entre eles. A heroína Cindy Campbell e a sua turma de amigos mauricinhos e patricinhas, tentam se proteger do perigo... Mas uma reporter irritante, Gail Hailstorm, simplesmente não os deixa em paz! Parece familiar? Talvez sim, mas essa história repleta de reviravoltas e surpresas horripilantes e humor ultrajante extrapola no gênero de horror e ação.",
+            "popularity": 3.949,
+            "poster_path": "/daorfyZdHkI44vuf3DVDbmJkYQI.jpg",
+            "release_date": "2000-07-07",
+            "title": "Todo Mundo em Pânico",
+            "video": false,
+            "vote_average": 6.362,
+            "vote_count": 7108
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/hdsljBbm6xRpVDOvRg5lBcE6A6h.jpg",
+            "genre_ids": [
+                27,
+                53
+            ],
+            "id": 125509,
+            "original_language": "en",
+            "original_title": "Wrong Turn 5: Bloodlines",
+            "overview": "Uma pequena cidade do West da Virginia hospeda o famoso festival intitulado “O Homem da Montanha” na data do dia das bruxas, em que uma multidão de foliões fantasiados se reúnem para festejar a noite com músicas e travessuras típicas da data. Mas uma família de canibais está prestes a acabar com a festa.",
+            "popularity": 3.533,
+            "poster_path": "/vsH0zwELHvVSKCyQlEZfDxjMSaP.jpg",
+            "release_date": "2012-10-18",
+            "title": "Pânico na Floresta 5",
+            "video": false,
+            "vote_average": 5.4,
+            "vote_count": 958
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/jPdvjEoB17ziOq8QnmG4qCLV8CF.jpg",
+            "genre_ids": [
+                27,
+                53
+            ],
+            "id": 9902,
+            "original_language": "en",
+            "original_title": "Wrong Turn",
+            "overview": "Cinco amigos percorrem uma trilha na floresta, em pleno estado da Virginia. Após pegarem o caminho errado, eles se deparam com uma família de canibais, que possui o rosto desfigurado devido a diversas gerações cosanguíneas terem nascido. Desesperados após serem capturados, os amigos agora querem apenas fugir do local o mais rápido possível.",
+            "popularity": 3.575,
+            "poster_path": "/mQVIIUXHo3Qpd6nu0api7UyMpas.jpg",
+            "release_date": "2003-05-30",
+            "title": "Pânico na Floresta",
+            "video": false,
+            "vote_average": 6.4,
+            "vote_count": 2754
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/cjSB3ZjaMpaa9oHFyeYha3KG0mp.jpg",
+            "genre_ids": [
+                35
+            ],
+            "id": 4248,
+            "original_language": "en",
+            "original_title": "Scary Movie 2",
+            "overview": "Brincando com o terror, o professor Oldman e Dwight seu assistente, preparam um final de semana hilariante e super especial. Um experiência sobre exorcismo, onde Cindy e \"aquele\" grupo de jovens malucos e assustados deverão ficar sem dormir. A incrível arapuca terá lugar na \"Casa do Inferno\", um casarão mal-assombrado afastado da cidade, e onde não falta nem o repulsivo mordono sempre presente nas melhores histórias de terror. Como alvos desta comédia escrachada, encontramos \"O Exorcista\", \"Poltergeist\", \"A Casa da Colina\", \"Revelação\" e até mesmo \"As Panteras\" e \"Missão Impossível 2\". Agora muito mais engraçado. Imperdível!",
+            "popularity": 3.655,
+            "poster_path": "/549UoU38uoikbqgXG09rkkfIEWf.jpg",
+            "release_date": "2001-07-04",
+            "title": "Todo Mundo em Pânico 2",
+            "video": false,
+            "vote_average": 5.796,
+            "vote_count": 4735
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/rNqfOqFYpSCeSq2YC5pY8F80Yz4.jpg",
+            "genre_ids": [
+                27,
+                9648
+            ],
+            "id": 4233,
+            "original_language": "en",
+            "original_title": "Scream 2",
+            "overview": "Dois anos após o massacre em Woodsboro, Sidney Prescott e Randy Meeks estão tentando refazer suas vidas em uma nova cidade. Estudando no colégio de Windsor, eles vão lidar com uma nova onda de assassinatos quando o terrível psicopata retorna para assombrá-los nas vésperas do lançamento do filme baseado nos seus crimes.",
+            "popularity": 3.949,
+            "poster_path": "/zqDrfOJ0ChhYFyv3iQyTgNZGs2B.jpg",
+            "release_date": "1997-12-12",
+            "title": "Pânico 2",
+            "video": false,
+            "vote_average": 6.494,
+            "vote_count": 4285
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/jncviKGvFlxdeh6vYWe9g4LmG3j.jpg",
+            "genre_ids": [
+                27,
+                53
+            ],
+            "id": 23823,
+            "original_language": "en",
+            "original_title": "Wrong Turn 3: Left for Dead",
+            "overview": "Uma van cheia de prisioneiros é puxada para fora da estrada por um canibal louco, eles precisam lutar por sua sobrevivência em uma floresta cheia de armadilhas.",
+            "popularity": 3.532,
+            "poster_path": "/ablEp5NwXbfSL3HXPOkM9fW5DKP.jpg",
+            "release_date": "2009-10-08",
+            "title": "Pânico na Floresta 3",
+            "video": false,
+            "vote_average": 5.7,
+            "vote_count": 1178
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/7t4ze1cWi3Cb7OdnuDcooDme6qo.jpg",
+            "genre_ids": [
+                35
+            ],
+            "id": 4258,
+            "original_language": "en",
+            "original_title": "Scary Movie 5",
+            "overview": "O novo filme da franquia mais politicamente incorreta do cinema inclui paródias dos filmes \"Atividade Paranormal\", \"Mama\", \"A Entidade\", \"A Morte do Demônio\", \"A Origem\", \"Cisne Negro\" e outras referências da cultura pop.",
+            "popularity": 3.577,
+            "poster_path": "/xx8Lw28eJGEn8QyQVQExuIBDo3z.jpg",
+            "release_date": "2013-04-11",
+            "title": "Todo Mundo em Pânico 5",
+            "video": false,
+            "vote_average": 4.8,
+            "vote_count": 2828
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/pSNwe7G9bESwlCBVurlwRs7fMZU.jpg",
+            "genre_ids": [
+                35
+            ],
+            "id": 4257,
+            "original_language": "en",
+            "original_title": "Scary Movie 4",
+            "overview": "Mais uma continuação da franquia de filmes que faz sátiras das produções mais recentes de terror, como \"Jogos Mortais\" e \"O Grito\". Desta vez, duas jovens tentam salvar o mundo de uma invasão alienígena.",
+            "popularity": 3.617,
+            "poster_path": "/eq5xuEdFjjUsaLeKVLlokd4pnKj.jpg",
+            "release_date": "2006-04-12",
+            "title": "Todo Mundo em Pânico 4",
+            "video": false,
+            "vote_average": 5.5,
+            "vote_count": 3306
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/jYpwqOxFszLppKGDV77EsW4WOi8.jpg",
+            "genre_ids": [
+                27,
+                53
+            ],
+            "id": 71672,
+            "original_language": "en",
+            "original_title": "Wrong Turn 4: Bloody Beginnings",
+            "overview": "Um grupo de jovens esquiadores consegue encontrar abrigo durante uma violenta nevasca. O que eles não sabem é que o lugar em que estão se refugiando é um antigo hospital psiquiátrico que não está tão abandonado quanto parece.",
+            "popularity": 3.608,
+            "poster_path": "/aMBWDYLYFOHYp98HkHyqCOhzGQ9.jpg",
+            "release_date": "2011-10-17",
+            "title": "Pânico na Floresta 4: Origens Sangrentas",
+            "video": false,
+            "vote_average": 5.7,
+            "vote_count": 1114
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/c5EmNhLQsTTKAyUHULnKYQjlloz.jpg",
+            "genre_ids": [
+                27,
+                9648
+            ],
+            "id": 41446,
+            "original_language": "en",
+            "original_title": "Scream 4",
+            "overview": "Faz muitos anos que o assassino Ghostface deixou um rastro mortal pela cidade de Woodsboro. A fim de superar o trauma desses terríveis acontecimentos, Sidney Prescott escreveu um livro de auto-ajuda. Ela retorna à Woodsboro para lançar seu livro e reencontra os velhos amigos Gale Weathers e o Xerife Dewey. No entanto, a chegada de Sidney também provoca o retorno de Ghostface, colocando Sidney e todos que ama em perigo.",
+            "popularity": 3.907,
+            "poster_path": "/qqqE8jR2bzZldtW5lJwKhHMxkx0.jpg",
+            "release_date": "2011-04-13",
+            "title": "Pânico 4",
+            "video": false,
+            "vote_average": 6.5,
+            "vote_count": 3814
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/vD1yKObsRS2cvpmtuaCaMhr4zxe.jpg",
+            "genre_ids": [
+                53
+            ],
+            "id": 44363,
+            "original_language": "en",
+            "original_title": "Frozen",
+            "overview": "Um dia típico nas montanhas se torna um pesadelo gelado para três esquiadores que ficam presos em um teleférico antes de sua última descida. A equipe da estação de esqui desliga as luzes da pista e o trio percebe, em pânico, que foram esquecidos. Com hipotermia e queimaduras de frio, os amigos são forçados a tomar medidas extremas para sair da montanha, antes que morram congelados.",
+            "popularity": 3.532,
+            "poster_path": "/1F0RJOWzYFeounRncvXjUCc8Tmp.jpg",
+            "release_date": "2010-02-05",
+            "title": "Pânico na Neve",
+            "video": false,
+            "vote_average": 6.0,
+            "vote_count": 1860
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/iS3cMqqWQBehsm0b9Zb5ND4m2pf.jpg",
+            "genre_ids": [
+                27
+            ],
+            "id": 259072,
+            "original_language": "en",
+            "original_title": "Wrong Turn 6: Last Resort",
+            "overview": "Uma misteriosa herança leva Danny e seus amigos para um resort abandonado em Hobb Springs, que está sobre os cuidades de Jackson e Sally, um estranho casal que introduz Danny à família que nunca conheceu. Mas aos poucos, ele percebe que há esquisitas tradições, como canibalismo, uma das práticas que mantém a família unida. Agora, Danny terá de escolher entre seus amigos e sua linhagem de sangue.",
+            "popularity": 1.981,
+            "poster_path": "/z9JMIja6UYHwK6fFw0RR5w3pGVR.jpg",
+            "release_date": "2014-08-22",
+            "title": "Pânico na Floresta 6",
+            "video": false,
+            "vote_average": 5.4,
+            "vote_count": 895
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/wUXZ8KjLreDJPW3RCZTxrgJkb3i.jpg",
+            "genre_ids": [
+                28,
+                27,
+                878
+            ],
+            "id": 336560,
+            "original_language": "en",
+            "original_title": "Lake Placid vs. Anaconda",
+            "overview": "Quando um crocodilo colossal e uma cobra gigante entram em confronto, é preciso encontrar uma maneira de detê-los antes que destruam a cidade.",
+            "popularity": 3.534,
+            "poster_path": "/nrMexDnyEBfdXIJhW4CIBw5Izir.jpg",
+            "release_date": "2015-04-25",
+            "title": "Pânico no Lago: Projeto Anaconda",
+            "video": false,
+            "vote_average": 5.0,
+            "vote_count": 220
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/sEXO8VGcVrXbXYXOtKlFqsBhnba.jpg",
+            "genre_ids": [
+                53
+            ],
+            "id": 517024,
+            "original_language": "ru",
+            "original_title": "Отрыв",
+            "overview": "Cinco jovens que querem celebrar a véspera de ano novo no topo de uma montanha, ficam presos em um teleférico. O que começou como uma festa de aventura, logo se torna uma luta pela sobrevivência.",
+            "popularity": 3.539,
+            "poster_path": "/hbo1N9W5gwPjQ4wF2aghUrMuhb6.jpg",
+            "release_date": "2019-02-14",
+            "title": "Pânico nas Alturas",
+            "video": false,
+            "vote_average": 5.399,
+            "vote_count": 203
+        }
+    ],
+    "total_pages": 11,
+    "total_results": 206
+}
