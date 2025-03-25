@@ -2,7 +2,7 @@ describe('Homepage', () => {
 
   beforeEach(() => {
     cy.visit('/');
-    cy.intercept('GET', 'https://api.themoviedb.org/3/movie/top_rated?api_key=4a0342e2d6f23f9cacb905d34fd4ffcc&language=pt-BR', {
+    cy.intercept('GET', `https://api.themoviedb.org/3/movie/top_rated?${Cypress.env('VITE_API_KEY')}&${Cypress.env('VITE_API_LANGUAGE')}`, {
       fixture: 'bestMovies.json'
     });
   })
@@ -14,11 +14,11 @@ describe('Homepage', () => {
 
   it('should go to homepage from movie page when click on brand name', () => {
 
-    cy.intercept('GET', 'https://api.themoviedb.org/3/movie/278?api_key=4a0342e2d6f23f9cacb905d34fd4ffcc&language=pt-BR', {
+    cy.intercept('GET', `https://api.themoviedb.org/3/movie/278?${Cypress.env('VITE_API_KEY')}&${Cypress.env('VITE_API_LANGUAGE')}`, {
       fixture: 'movieDetails.json'
     });
 
-    cy.intercept('GET', 'https://api.themoviedb.org/3/movie/278/videos?api_key=4a0342e2d6f23f9cacb905d34fd4ffcc&language=pt-BR', {
+    cy.intercept('GET', `https://api.themoviedb.org/3/movie/278/videos?${Cypress.env('VITE_API_KEY')}&${Cypress.env('VITE_API_LANGUAGE')}`, {
       fixture: 'trailers.json'
     });
 
@@ -29,7 +29,7 @@ describe('Homepage', () => {
 
   it('should go to homepage from results page when click on brand name', () => {
 
-    cy.intercept('GET', 'https://api.themoviedb.org/3/search/movie?query=batman&api_key=4a0342e2d6f23f9cacb905d34fd4ffcc&language=pt-BR', {
+    cy.intercept('GET', `https://api.themoviedb.org/3/search/movie?query=batman&${Cypress.env('VITE_API_KEY')}&${Cypress.env('VITE_API_LANGUAGE')}`, {
       fixture: 'search.json'
     });
 

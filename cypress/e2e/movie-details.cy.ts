@@ -1,9 +1,9 @@
 describe('Movie Details', () => {
     it('should go to the movie page by click the details button from movie card', () => {
-        cy.intercept('GET', 'https://api.themoviedb.org/3/movie/top_rated?api_key=4a0342e2d6f23f9cacb905d34fd4ffcc&language=pt-BR', {
+        cy.intercept('GET', `https://api.themoviedb.org/3/movie/top_rated?${Cypress.env('VITE_API_KEY')}&${Cypress.env('VITE_API_LANGUAGE')}`, {
             fixture: 'bestMovies.json'
         });
-        cy.intercept("GET", "https://api.themoviedb.org/3/movie/278?api_key=4a0342e2d6f23f9cacb905d34fd4ffcc&language=pt-BR", {
+        cy.intercept("GET", `https://api.themoviedb.org/3/movie/278?${Cypress.env('VITE_API_KEY')}&${Cypress.env('VITE_API_LANGUAGE')}`, {
             fixture: "movieDetails.json"
         });
 

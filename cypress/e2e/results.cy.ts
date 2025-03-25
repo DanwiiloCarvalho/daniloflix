@@ -1,12 +1,12 @@
 describe('Results', () => {
     it("should show more results when click on 'Ver mais' button", () => {
         cy.visit('/');
-        cy.intercept('GET', 'https://api.themoviedb.org/3/movie/top_rated?api_key=4a0342e2d6f23f9cacb905d34fd4ffcc&language=pt-BR', {
+        cy.intercept('GET', `https://api.themoviedb.org/3/movie/top_rated?${Cypress.env('VITE_API_KEY')}&${Cypress.env('VITE_API_LANGUAGE')}`, {
             fixture: 'bestMovies.json'
         });
 
         cy.get("input[placeholder=\"Busque um filme\"]").type("panico{enter}");
-        cy.intercept('GET', 'https://api.themoviedb.org/3/search/movie?query=panico&api_key=4a0342e2d6f23f9cacb905d34fd4ffcc&language=pt-BR', {
+        cy.intercept('GET', `https://api.themoviedb.org/3/search/movie?query=panico&${Cypress.env('VITE_API_KEY')}&${Cypress.env('VITE_API_LANGUAGE')}`, {
             fixture: 'resultsShowMore.json'
         });
 
