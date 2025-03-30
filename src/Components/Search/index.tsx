@@ -1,11 +1,14 @@
-import { BiSearchAlt2 } from 'react-icons/bi';
-import classes from './Search.module.css';
 import { useRef } from 'react';
-import { createSearchParams, useNavigate } from 'react-router-dom';
+import { BiSearchAlt2 } from 'react-icons/bi';
+import { createSearchParams, NavigateFunction } from 'react-router-dom';
+import classes from './Search.module.css';
 
-export function Search() {
+interface SearchProps {
+    navigate: NavigateFunction
+}
+
+export function Search({ navigate }: SearchProps) {
     const refWordKey = useRef<HTMLInputElement | null>(null);
-    const navigate = useNavigate();
 
     function search() {  
         if (refWordKey.current?.value) {
