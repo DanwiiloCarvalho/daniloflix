@@ -1,11 +1,10 @@
-import { AiFillStar } from 'react-icons/ai';
-import { BsFileEarmarkTextFill, BsWallet2 } from 'react-icons/bs';
-import { GiChart } from 'react-icons/gi';
-import { BsHourglassSplit } from 'react-icons/bs';
-import classes from './MovieDetails.module.css';
 import { useEffect, useState } from 'react';
+import { AiFillStar } from 'react-icons/ai';
+import { BsFileEarmarkTextFill, BsHourglassSplit, BsWallet2 } from 'react-icons/bs';
+import { GiChart } from 'react-icons/gi';
 import { useNavigate, useParams } from 'react-router-dom';
 import { VideoPlayer } from '../../Components/VideoPlayer';
+import classes from './MovieDetails.module.css';
 
 type Details = {
     poster_path: string,
@@ -39,7 +38,7 @@ export function MovieDetails() {
             try {
                 const response = await fetch(urlDetails);
                 if (response.status === 404) {
-                    navigate('/notfound');
+                    navigate('/daniloflix/notfound');
                     return;
                 }
                 const data = await response.json();
