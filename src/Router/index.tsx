@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
+import { App } from "../Components/App";
+import { ErrorPage } from "../Pages/ErrorPage";
 import { Homepage } from "../Pages/Homepage";
 import { MovieDetails } from "../Pages/MovieDetails";
-import { SearchResults } from "../Pages/SearchResults";
-import { App } from "../Components/App";
 import { NoResults } from "../Pages/NoResults";
-import { ErrorPage } from "../Pages/ErrorPage";
+import { SearchResults } from "../Pages/SearchResults";
 
 export const router = createBrowserRouter([
     {
@@ -22,12 +22,12 @@ export const router = createBrowserRouter([
             {
                 path: '/daniloflix/search',
                 element: <SearchResults/>,
-                children: [
+                /* children: [
                     {
                         path: '/daniloflix/search',
                         element: <NoResults/>
                     }
-                ]
+                ] */
             },
             {
                 path: '/daniloflix/notfound',

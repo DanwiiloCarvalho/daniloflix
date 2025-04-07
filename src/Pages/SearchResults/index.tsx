@@ -1,8 +1,9 @@
-import { Outlet, useSearchParams } from 'react-router-dom';
-import classes from './SearchResults.module.css';
 import { useEffect, useState } from 'react';
-import { Movie } from '../Homepage';
+import { useSearchParams } from 'react-router-dom';
 import { MovieCard } from '../../Components/MovieCard';
+import { Movie } from '../Homepage';
+import { NoResults } from '../NoResults';
+import classes from './SearchResults.module.css';
 
 type infoResults = {
     page: number,
@@ -34,26 +35,20 @@ export function SearchResults() {
                     setNotFound(true);
                 }
 
-                //setSearchResults([...searchResults, ...data.results]);
                 setSearchResults(data.results);
-
-                /* if (searchResults.length === 0 && mainElement.current) {
-                    console.log(mainElement.current);
-                    mainElement.current.classList.add('no_results')
-                } */
 
                 const info: infoResults = {
                     page: data.page,
                     total_pages: data.total_pages,
                     total_results: data.total_results
                 }
+
                 setInfoResults(info);
-                //setSearchResults(prevResults => [...prevResults, ...data.results]);
             } catch (error: unknown) {
                 console.log(error as Error);
-            }
-            
+            }     
         }
+        
         fetchSearchResults();
     }, [searchParams]);
 
@@ -79,8 +74,8 @@ export function SearchResults() {
                 {searchResults && 
                     searchResults.map(movie => <li key={movie.id}><MovieCard {...movie}/></li>)}
             </ul>
-            {(searchResults.length < infoResults.total_results) && <button className={classes.show_more} onClick={showMore}>Ver mais</button>}
-            {notFound && <div className={classes.no_results}><Outlet/></div>}
+            {(infoResults.page < infoResults.total_pages) && <button className={classes.show_more} onClick={showMore}>Ver mais</button>}
+            {notFound && <div className={classes.no_results}><NoResults /></div>}
             {searchResults.length > 0 && <p className={classes.total_size}>{searchResults.length} de {infoResults.total_results}</p>}
         </main>
     );
