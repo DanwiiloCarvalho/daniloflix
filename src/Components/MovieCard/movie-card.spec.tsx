@@ -88,4 +88,16 @@ describe('MovieCard', () => {
 
         expect(Number(voteAverage?.textContent)).toBe(movie.vote_average);
     })
+
+    it('should show a template svg if poster path is empty', async () => {
+        const { container } = render(
+            <MemoryRouter>
+                <MovieCard {...movie} poster_path='' />
+            </MemoryRouter>
+        );
+
+        const poster = container.querySelector('article > div:nth-child(1)')
+
+        expect(poster).toHaveClass(styles.placeholder)
+    })
 });
