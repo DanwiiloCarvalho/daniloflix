@@ -11,6 +11,7 @@
     "cypress:open": "cypress open",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
