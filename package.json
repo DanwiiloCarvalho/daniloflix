@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "cypress:open": "cypress open",
     "test": "vitest",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
