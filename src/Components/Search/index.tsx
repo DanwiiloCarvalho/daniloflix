@@ -27,7 +27,7 @@ export function Search({ navigate }: SearchProps) {
     return (
         <div className={classes.search}>
             <input ref={refWordKey} type="text" placeholder="Busque um filme" onKeyDown={e => e.key === 'Enter' ? search() : null}/>
-            <button onClick={search}><BiSearchAlt2/></button>
+            <button aria-label={`Buscar pelo filme ${refWordKey.current?.value}`} onClick={search}><BiSearchAlt2/></button>
         </div>
     );
 }
