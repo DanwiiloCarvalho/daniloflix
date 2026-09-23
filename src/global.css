@@ -7,7 +7,39 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+    /* Modo escuro (padrão) — paleta atual do Daniloflix */
+    color-scheme: dark;
+    --color-bg: #000000;
+    --color-surface: #1b1b1b;
+    --color-accent: #DEB887;
+    --color-on-accent: #000000;
+    --color-text: #ffffff;
+    --color-text-secondary: whitesmoke;
+    --color-text-muted: rgb(165, 165, 165);
+    --color-neutral: whitesmoke;
+    --color-neutral-hover: rgb(187, 187, 187);
+}
+
+:root[data-theme='light'] {
+    color-scheme: light;
+    --color-bg: #ffffff;
+    --color-surface: #f0f0f0;
+    --color-accent: #8B6914;
+    --color-on-accent: #ffffff;
+    --color-text: #111111;
+    --color-text-secondary: #333333;
+    --color-text-muted: #666666;
+    --color-neutral: #333333;
+    --color-neutral-hover: #444444;
+}
+
 body, #root {
     min-height: 100vh;
     width: 100%;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }

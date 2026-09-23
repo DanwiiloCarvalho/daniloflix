@@ -1,10 +1,10 @@
 .movie_info {
     flex: 1;
-    background-color: black;
+    background-color: var(--color-bg);
 }
 
 .moviecard {
-    background-color: #1b1b1b;
+    background-color: var(--color-surface);
     height: 550px;
     width: 70%;
     margin: 20px auto;
@@ -28,18 +28,18 @@
 }
 
 .container > h1 {
-    color: whitesmoke;
+    color: var(--color-text-secondary);
     text-align: center;
     font-size: 1.5rem;
     margin: 15px 0;
 }
 
 .star {
-    color: #DEB887;
+    color: var(--color-accent);
 }
 
 .grade {
-    color: whitesmoke;
+    color: var(--color-text-secondary);
 }
 
 .score {
@@ -48,13 +48,13 @@
 }
 
 .tagline {
-    color: whitesmoke;
+    color: var(--color-text-secondary);
     margin: 15px 0 35px;
 }
 
 .movie_attributes {
     align-self: flex-start;
-    color: whitesmoke;
+    color: var(--color-text-secondary);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -72,7 +72,7 @@
 }
 
 .info > svg {
-    color: #DEB887;
+    color: var(--color-accent);
 }
 
 .info > span {

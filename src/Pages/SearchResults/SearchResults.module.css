@@ -1,18 +1,18 @@
 .main_container {
     flex: 1;
-    background-color: black;
+    background-color: var(--color-bg);
     position: relative;
 }
 
 .main_container > h1 {
-    color: white;
+    color: var(--color-text);
     font-size: 1.5rem;
     text-align: center;
     margin: 15px 0;
 }
 
 .search_term {
-    color: #DEB887;
+    color: var(--color-accent);
 }
 
 .no_results {
@@ -31,7 +31,8 @@
     padding: 7px 10px;
     border: none;
     border-radius: 2px;
-    background-color: whitesmoke;
+    background-color: var(--color-neutral);
+    color: var(--color-bg);
     box-shadow: 0px 0px 5px rgb(229, 226, 226);
     /* box-shadow:0 4px 0 rgb(192, 192, 192); */
     cursor: pointer;
@@ -39,7 +40,7 @@
 }
 
 .show_more:hover {
-    background-color: rgb(187, 187, 187);
+    background-color: var(--color-neutral-hover);
 }
 
 .show_more:active {
@@ -48,7 +49,7 @@
 }
 
 .total_size {
-    color: whitesmoke;
+    color: var(--color-text-secondary);
     text-align: center;
     margin-bottom: 10px;
 }

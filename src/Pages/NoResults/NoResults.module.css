@@ -5,16 +5,16 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
-    background-color: black;
+    background-color: var(--color-bg);
 }
 
 .no_results > svg {
     width: 3rem;
     height: 3rem;
-    color: #DEB887;
+    color: var(--color-accent);
 }
 
 .no_results > p {
-    color: whitesmoke;
+    color: var(--color-text-secondary);
     font-size: 1.2rem;
 }

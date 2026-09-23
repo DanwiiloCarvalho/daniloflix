@@ -1,5 +1,5 @@
 .main_error {
-    background-color: black;
+    background-color: var(--color-bg);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -8,7 +8,7 @@
 }
 
 .main_error > p {
-    color: #DEB887;
+    color: var(--color-accent);
     font-size: 1.2rem;
     text-align: center;
     font-weight: 600;
@@ -16,7 +16,7 @@
 }
 
 .main_error > svg {
-    color: #DEB887;
+    color: var(--color-accent);
     width: 5rem;
     height: 5rem;
 }

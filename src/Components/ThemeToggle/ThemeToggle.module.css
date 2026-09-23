@@ -1,0 +1,67 @@
+/* =========================================
+   Mobile First (Default Styles)
+   ========================================= */
+.toggle {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-accent);
+    border-radius: 50%;
+    background-color: var(--color-surface);
+    color: var(--color-accent);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 300ms linear, color 300ms linear, transform 200ms ease;
+}
+
+.toggle:hover {
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
+}
+
+.toggle:active {
+    transform: scale(0.92);
+}
+
+.toggle:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+.toggle svg {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+/* =========================================
+   Tablet / Medium Screens (>= 768px)
+   ========================================= */
+@media (min-width: 768px) {
+    .toggle {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+    }
+
+    .toggle svg {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+}
+
+/* =========================================
+   Desktop / Large Screens (>= 992px)
+   ========================================= */
+@media (min-width: 992px) {
+    .toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .toggle svg {
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+}

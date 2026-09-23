@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Brand } from "../Brand";
 import { Search } from "../Search";
+import { ThemeToggle } from "../ThemeToggle";
 import classes from './Header.module.css';
 
 export function Header() {
@@ -9,7 +10,10 @@ export function Header() {
     return (
         <header className={classes.header}>
             <Brand brandName={'DaniloFlix'}/>
-            <Search navigate={navigate} />
+            <div className={classes.controls}>
+                <Search navigate={navigate} />
+                <ThemeToggle />
+            </div>
         </header>
     );
 }
