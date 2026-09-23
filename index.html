@@ -5,8 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/daniloflix/assets/favicon-823a5e3c.svg" type="image/x-icon">
     <title>Daniloflix</title>
-    <script type="module" crossorigin src="/daniloflix/assets/index-bbda2e22.js"></script>
-    <link rel="stylesheet" href="/daniloflix/assets/index-615fef44.css">
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('daniloflix-theme');
+          var theme = stored === 'light' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (error) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/daniloflix/assets/index-e47c7c44.js"></script>
+    <link rel="stylesheet" href="/daniloflix/assets/index-6c57b342.css">
   </head>
   <body>
     <div id="root"></div>
