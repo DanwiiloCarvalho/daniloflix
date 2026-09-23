@@ -1,6 +1,7 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "instructions": [
-    "rules/react-standards.md"
+    "rules/react-standards.md",
+    "rules/mobile-first.md"
   ]
 }
