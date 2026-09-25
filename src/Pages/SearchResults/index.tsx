@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import NProgress from 'nprogress';
 import { useSearchParams } from 'react-router-dom';
 import { MovieCard } from '../../Components/MovieCard';
 import { Movie } from '../Homepage';
@@ -27,6 +28,7 @@ export function SearchResults() {
     useEffect(() => {
         setNotFound(false);
         async function fetchSearchResults() {
+            NProgress.start();
             try {
                 const response = await fetch(urlResults);
                 const data = await response.json();
@@ -46,6 +48,8 @@ export function SearchResults() {
                 setInfoResults(info);
             } catch (error: unknown) {
                 console.log(error as Error);
+            } finally {
+                NProgress.done();
             }     
         }
         
@@ -54,6 +58,7 @@ export function SearchResults() {
 
     function showMore() {
         async function fetchNextPage() {
+            NProgress.start();
             try {
                 const urlNextPage:string = urlResults + '&page=' + ++infoResults.page;
                 const response = await fetch(urlNextPage);
@@ -61,8 +66,9 @@ export function SearchResults() {
                 setSearchResults(prev => [...prev, ...data.results]);
             } catch (error: unknown) {
                 console.log(error as Error);
+            } finally {
+                NProgress.done();
             }
-            
         }
         fetchNextPage();
     }
