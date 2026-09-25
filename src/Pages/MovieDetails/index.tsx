@@ -70,7 +70,7 @@ export function MovieDetails() {
         }
 
         fetchMovieDetails();
-    },[]);
+    }, [navigate, urlDetails, urlTrailers]);
 
     return (
         <>

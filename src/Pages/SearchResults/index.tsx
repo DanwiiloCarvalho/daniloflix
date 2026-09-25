@@ -50,7 +50,7 @@ export function SearchResults() {
         }
         
         fetchSearchResults();
-    }, [searchParams]);
+    }, [searchParams, urlResults]);
 
     function showMore() {
         async function fetchNextPage() {

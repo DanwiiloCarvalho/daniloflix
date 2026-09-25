@@ -42,7 +42,7 @@ export function Homepage() {
             }
         }
         fetchMovies();
-    },[])
+    }, [api, api_key, language])
 
     return (
         <main className={classes.main}>
