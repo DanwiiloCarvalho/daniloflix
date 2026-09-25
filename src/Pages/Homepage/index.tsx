@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import NProgress from 'nprogress';
 import { MovieCard } from '../../Components/MovieCard';
 import classes from './Homepage.module.css';
 
@@ -25,6 +26,7 @@ export function Homepage() {
 
     useEffect(() => {
         async function fetchMovies() {
+            NProgress.start();
             try {
                 const response = await fetch(api + '?' + api_key + '&' + language);
                 const data: DataResponse = await response.json();
@@ -39,6 +41,8 @@ export function Homepage() {
                 setMoviesTopRated(dataMovies);   
             } catch (error: unknown) {
                 console.log(error as Error)
+            } finally {
+                NProgress.done();
             }
         }
         fetchMovies();
