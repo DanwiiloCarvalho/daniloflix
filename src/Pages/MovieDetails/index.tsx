@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import NProgress from 'nprogress';
 import { AiFillStar } from 'react-icons/ai';
 import { BsFileEarmarkTextFill, BsHourglassSplit, BsWallet2 } from 'react-icons/bs';
 import { GiChart } from 'react-icons/gi';
@@ -35,6 +36,7 @@ export function MovieDetails() {
     
     useEffect(() => {
         async function fetchMovieDetails() {
+            NProgress.start();
             try {
                 const response = await fetch(urlDetails);
                 if (response.status === 404) {
@@ -66,6 +68,8 @@ export function MovieDetails() {
 
             } catch (error: unknown) {
                 console.log(error as Error);
+            } finally {
+                NProgress.done();
             }
         }
 
