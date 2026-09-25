@@ -43,3 +43,11 @@ body {
     background-color: var(--color-bg);
     color: var(--color-text);
 }
+
+#nprogress .bar {
+    background: var(--color-accent);
+}
+
+#nprogress .peg {
+    box-shadow: 0 0 10px var(--color-accent), 0 0 5px var(--color-accent);
+}
